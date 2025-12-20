@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASIDI Restaurant — Contact</title>
+  <link rel="stylesheet" href="pr.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.png" alt="ASIDI Restaurant logo" />
+      <span class="brand-name">ASIDI Restaurant</span>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <ul id="primary-nav" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main id="main" class="container">
+    <section class="page-header">
+      <h1>Contact us</h1>
+
+      <p>Questions, feedback, or special requests? We’d love to hear from you.</p>
+<h3>Tel:+2207570955</h3>
+    </section>
+
+    <div class="two-col">
+      <form id="contact-form" class="form card" novalidate aria-describedby="contact-feedback">
+        <div class="form-row">
+          <label for="cname">Full name</label>
+          <input id="cname" name="cname" type="text" required placeholder="e.g., Lamin Ceesay" />
+          <small class="error-msg" id="cname-error"></small>
+        </div>
+        <div class="form-row">
+          <label for="cemail">Email</label>
+          <input id="cemail" name="cemail" type="email" required placeholder="e.g., you@example.com" />
+          <small class="error-msg" id="cemail-error"></small>
+        </div>
+        <div class="form-row">
+          <label for="cmessage">Message</label>
+          <textarea id="cmessage" name="cmessage" required rows="5" placeholder="How can we help?"></textarea>
+          <small class="error-msg" id="cmessage-error"></small>
+        </div>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <div id="contact-feedback" class="feedback" role="status" aria-live="polite"></div>
+      </form>
+
+      <aside class="card">
+        <h2>Find us</h2>
+        <p><strong>Address:</strong> Sukuta, West Coast Division, The Gambia</p>
+        <p><strong>Hours:</strong> Mon–Sun, 11:00–22:00</p>
+        <div class="map-embed">
+          <!-- Replace src with a real Google Maps embed if available -->
+          <iframe title="Map to ASIDI Restaurant" aria-label="Map"
+            src="https://maps.google.com/maps?q=Sukuta%20The%20Gambia&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+        <div class="social">
+          <a class="btn btn-secondary" href="#" aria-label="Visit our Facebook">Facebook</a>
+          <a class="btn btn-secondary" href="#" aria-label="Visit our Instagram">Instagram</a>
+          <a class="btn btn-secondary" href="#" aria-label="Visit our X">X</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> ASIDI Restaurant. All rights reserved.</p>
+  </footer>
+  <script src="pr.js"></script>
+</body>
+</html>

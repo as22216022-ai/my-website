@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASIDI Restaurant — Reservation</title>
+  <link rel="stylesheet" href="pr.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.png" alt="ASIDI Restaurant logo" />
+      <span class="brand-name">ASIDI Restaurant</span>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <ul id="primary-nav" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a class="active" href="reservation.html">Reservation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <section class="page-header">
+      <h1>Book a table</h1>
+      <p>Complete the form to reserve your dining experience.</p>
+    </section>
+
+    <form id="reservation-form" class="form card" novalidate aria-describedby="reservation-feedback">
+      <div class="form-row">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required placeholder="e.g., Fatou Jallow" />
+        <small class="error-msg" id="name-error"></small>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="e.g., you@example.com" />
+        <small class="error-msg" id="email-error"></small>
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" required placeholder="e.g., +220 123 4567" />
+        <small class="error-msg" id="phone-error"></small>
+      </div>
+
+      <div class="form-row">
+        <label for="date">Date</label>
+        <input id="date" name="date" type="date" required />
+        <small class="error-msg" id="date-error"></small>
+      </div>
+
+      <div class="form-row">
+        <label for="time">Time</label>
+        <input id="time" name="time" type="time" required />
+        <small class="error-msg" id="time-error"></small>
+      </div>
+
+      <div class="form-row">
+        <label for="guests">Guests</label>
+        <input id="guests" name="guests" type="number" min="1" max="12" required placeholder="e.g., 4" />
+        <small class="error-msg" id="guests-error"></small>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Submit reservation</button>
+      <div id="reservation-feedback" class="feedback" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> ASIDI Restaurant. All rights reserved.</p>
+  </footer>
+  <script src="pr.js"></script>
+</body>
+</html>
